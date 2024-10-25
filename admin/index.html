@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Página Administrativa</title>
+    <script src="./login.js" defer></script>
+</head>
+<body>
+    <header>
+        <div id="container-logo">
+                <img class="logo" src="../img/cafe-da-manha.png" alt="LOGO">
+        </div>
+        <nav id="container-opcoes">
+            <a href="../index.html">Sair</a>
+        </nav>
+    </header>
+    <main>
+        <section id="pedidoProduto">
+            <h2>Pedido de Produtos</h2><br>
+            <form id="formPedido">
+                <label for="nomeProduto">Nome:</label>
+                <input type="text" id="nomeProduto" name="nome"><br>
+        
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade" min="1">
+
+                <button type="reset">Limpar</button>
+                <button type="submit">Enviar</button>
+            </form>
+
+            <h2>Pedido Enviado</h2>
+            <table id="tabelaPedido">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Quantidade</th>
+                        <th>Data do Pedido</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>&nbsp;</tbody>
+            </table><br><hr>
+        </section>
+        <section id="sugestaoMenu">
+            <h2>Sugestão para adicionar no menu</h2><br>
+            <form id="formSugestao">
+                <label for="nomeComida">Nome:</label>
+                <input type="text" id="nomeComida" name="nome"><br>
+
+                <label for="secao">Seção do produto:</label>
+                <input type="text" name="secao" id="secao"><br>
+
+                <label for="preco">Preço sugerido:</label>
+                <input type="number" id="preco" name="preco" min="0" step="0.01" placeholder="0.00">
+
+                <button type="reset">Limpar</button>
+                <button type="submit">Enviar</button>
+            </form>     
+            
+            <h2>Sugestões Enviadas</h2>
+            <table id="tabelaSugestao">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Seção</th>
+                        <th>Preço Sugerido</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>&nbsp;</tbody>
+            </table><br><hr>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
