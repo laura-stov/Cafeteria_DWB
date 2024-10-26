@@ -27,7 +27,7 @@ formAdmin.addEventListener('submit', (evento) => {
     // Remover mensagem de erro se houver
     let msgErro = document.querySelector('.erro');
     if(msgErro){
-        login.remove();
+        msgErro.remove();
     }
 
     // Verificar se o admin existe
@@ -75,16 +75,16 @@ let dadosClientes = [
     { nome: "pedro", email: "pedro@email.com", senha: "pedro"}
 ];
 
-formCliente.addEventListener('submitClt', (evento) => {
+formCliente.addEventListener('submit', (evento) => {
     evento.preventDefault();
 
     let msgErro = document.querySelector('.erro');
     if(msgErro){
-        login.remove();
+        msgErro.remove();
     }
 
-    let email = document.getElementById('email').value;
-    let senha = document.getElementById('senha').value;
+    let email = document.getElementById('emailCliente').value;
+    let senha = document.getElementById('senhaCliente').value;
     let clienteEncontrado = false;
 
     dadosClientes.forEach(item =>{
@@ -101,7 +101,7 @@ formCliente.addEventListener('submitClt', (evento) => {
         const erro = document.createElement('p');
         erro.classList.add('erro');
         erro.innerText = 'Login ou senha inválidos'; 
-        formAdmin.prepend(erro); 
-        formAdmin.reset();
+        formCliente.prepend(erro); 
+        formCliente.reset();
     }
 });

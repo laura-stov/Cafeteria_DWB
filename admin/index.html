@@ -6,14 +6,19 @@
     <link rel="stylesheet" href="style.css">
     <title>Página Administrativa</title>
     <script src="./login.js" defer></script>
+    <script src="https://kit.fontawesome.com/63c0865c2d.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <div id="container-logo">
                 <img class="logo" src="../img/cafe-da-manha.png" alt="LOGO">
         </div>
+        <nav id="nav-site">
+            <a href="#pedidoProduto">Pedido de Produtos</a>
+            <a href="#sugestaoMenu">Sugestão de Menu</a>
+        </nav>
         <nav id="container-opcoes">
-            <a href="../index.html">Sair</a>
+            <a href="../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a>
         </nav>
     </header>
     <main>
@@ -70,9 +75,21 @@
                     </tr>
                 </thead>
                 <tbody>&nbsp;</tbody>
-            </table><br><hr>
+            </table><br>
         </section>
     </main>
-    <script src="./script.js"></script>
+    <footer>
+        <div class="logo-footer">
+            <img class="logo" src="../img/cafe-da-manha.png" alt="LOGO">
+            <p class="nome-footer">Instituto do Cafézinho</p>
+        </div> 
+        <ul class="lista-footer">Conheça as nossas lojas:
+            <li>São José dos Pinhais - Rua dos Limoeiros, 123</li>
+            <li>Pinhais - Rua Mariazinha, 456</li>
+            <li>Curitiba - Rua Joãozinho, 789</li>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
+    <script src="scroll.js"></script>
 </body>
 </html>

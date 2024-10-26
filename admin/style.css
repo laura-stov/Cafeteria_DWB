@@ -4,19 +4,28 @@
 }
 
 body{
-    background: linear-gradient(180deg, #fff3e1, #dfdddd);
+    background: linear-gradient(180deg, #733009, #D9A86C);
     background-repeat: no-repeat;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 header{
-    border: 1px solid black;
+    background-color: #e0dede;
     width:  100%;
     height: 70px;
     display: flex;
-    position: static;
+    position: fixed;
     gap: 100px;
     justify-content: space-between;
+    border-bottom: 1px solid #d7d5d5;
+    z-index: 1000;
+    top: 0;
+}
+
+#nav-site{
+    justify-content: space-around;
+    width: 25%;
 }
 
 .logo{
@@ -42,8 +51,7 @@ nav a{
 }
 
 nav a:hover{
-    color: #583c10;
-    font-size: 20px;
+    color: #532a13;
 }
     
 #container-opcoes{
@@ -108,18 +116,18 @@ form button:hover { background-color: #247126; }
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
 }
 
 table th, table td {
-    border: 1px solid #ddd;
+    border: 1px solid #7c4b2a;
     padding: 8px;
     text-align: center;
     width: 30%;
+    background-color: #e0dede;
 }
 
 table th {
-    background-color: rgb(78, 24, 56);
+    background-color: #733009;
     color: white;
 }
 
@@ -137,3 +145,63 @@ table td a{
 }
 
 table td a:hover{ color: rgb(7, 60, 105); }
+
+@font-face {
+    font-family: 'LavishlyYours';
+    src: url('../fontes/LavishlyYours-Regular.ttf') ;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fontes/Poppins/Poppins-Light.ttf') ;
+}
+
+@font-face {
+    font-family: 'Playfair';
+    src: url('../fontes/Playfair_Display/normal.ttf');
+}
+
+.nome-footer{
+    font-family: 'Poppins';
+    font-size: 15px;
+    color: black;
+}
+
+footer{
+    display: flex;
+    height: 150px;
+}
+
+.logo-footer{
+    margin: auto;
+    margin-left: auto;
+}
+
+.lista-footer{
+    font-family: 'Poppins';
+    font-size: 12px;
+    margin: auto;
+    margin-left: 50px;
+    list-style: none;
+}
+
+#pedidoProduto{
+    background-color: #ffe8d6;
+    padding-top: 80px;
+}
+
+#sugestaoMenu{
+    background-color: #ffe8d6;
+    padding-top: 5px;
+}
+
+h2{
+    font-family: "Playfair";
+    margin-left: 1%;
+}
+
+hr{
+    border: 0;
+    background-color: #d7d5d5;
+    height: 1px;
+}

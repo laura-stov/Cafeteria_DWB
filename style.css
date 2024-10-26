@@ -4,40 +4,26 @@
 }
 
 body{
-    background: linear-gradient(180deg, #fff3e1, #dfdddd);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background: linear-gradient(180deg, #733009, #D9A86C);
     background-repeat: no-repeat;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 header{
-    border: 1px solid black;
+    background-color: #e0dede;
     width:  100%;
     height: 70px;
     display: flex;
-    position: static;
-    gap: 100px;
-}
-
-.fundo{
-    position: absolute;
+    position:fixed;
     top: 0;
-    height: 800px;
-    width: 100%;
-    background: linear-gradient(180deg, #fff3e1, #dfdddd);
-    background-repeat: no-repeat;
-    background-position: 50% 85%;
-    background-size: cover;
-    opacity: 80%;
-    z-index: -1;
-}
-
-.content{
-    
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    color: white;
-    font-size: 5px;
+    left: 0;
+    gap: 100px;
+    z-index: 3;
+    border-bottom: 1px solid #d7d5d5;
 }
 
 .logo{
@@ -64,13 +50,8 @@ nav a{
     line-height: 70px;
     font-size: 18px;
     text-decoration: none;
-    color: black;
+    color: rgb(24, 23, 23);
     font-weight: bold;
-}
-
-a:hover{
-    color: #583c10;
-    font-size: 20px;
 }
 
 #container-opcoes, #container-login{
@@ -86,41 +67,165 @@ a:hover{
 }
 
 #container-login{
-    width: 18%;
+    width: 15%;
     right: 5%;
     align-items: center;
-    gap: 10px;
 }
 
 #container-login:last-child{
     margin-left: auto;
+    position: fixed;
 }
 
-.container-intro{
-    border: 1px solid black;
+#btnCliente{
+    margin-right: 20%;
+}
+
+#home{
     width: 100%;
     height: 600px;
     display: grid;
+    border: 1px solid black;
 }
 
 .img1{
     position: absolute;
-    width: 400px;
-    top: 300px;
-    right: 600px;
+    width: 20%;
+    top: 44%;
+    left: 53%;
     z-index: 1;
 }
 
 .img2{
     position: absolute;
-    top: 200px;
-    right: 300px;
+    top: 20%;
+    left: 71%;
     align-items: end;
-    width: 350px;
+    width: 20%;
     z-index: -1;
 }
-p{
-    font-size: large;
+
+.titulos{
+    position: absolute;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 900px;
+    height: 300px;
+}
+
+@font-face {
+    font-family: 'LavishlyYours';
+    src: url('fontes/LavishlyYours-Regular.ttf') ;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fontes/Poppins/Poppins-Light.ttf') ;
+}
+
+@font-face {
+    font-family: 'Playfair';
+    src: url('fontes/Playfair_Display/normal.ttf');
+}
+.titulo{
+    font-family: 'LavishlyYours';
+    font-size: 80px;
+    color: #ddcbcb;
+}
+
+.texto1{
+    font-family: 'Poppins';
+    font-size: 25px;
+    color: #ddcbcb;
+}
+
+.titulo-categorias{
+    height: 75px;
+    font-family: 'Playfair';
+    font-size: 25px;
+    margin-top: 50px;
+    margin-left: 50px;
+    font-weight: 500;
+}
+
+#novidades{
+    display: flex;
+    width: 100%;
+    height: 600px;
+    background-color: #e0dede;
+}
+
+#promocoes{
+    display: flex;
+    width: 100%;
+    height: 600px;
+    background-color: #e0dede;
+}
+#lista-itens{
+    position: absolute;
+    display: inline-flex;
+}
+.item{
+    background-color: #f1f1f1;
+    border-radius: 25px;
+    margin-top: 150px;
+    margin-left: 50px;
+    border: 1px solid black;
+    height: 300px;
+    width: 300px;
+}
+
+.img-item-promocao{
+    border-radius: 25px;
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.nome-item{
+    margin: 10px;
+    margin-left: 15px;
+    font-family: 'Poppins';
+    font-size: 18px;
+}
+
+.preco-desc{
+    margin-left: 15px;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.preco-item{
+    margin: 2px;
+    margin-left: 15px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.nome-footer{
+    font-family: 'Poppins';
+    font-size: 15px;
+    color: black;
+}
+footer{
+    display: flex;
+    height: 150px;
+}
+
+.logo-footer{
+    margin: auto;
+    margin-left: auto;
+}
+
+.lista-footer{
+    font-family: 'Poppins';
+    font-size: 12px;
+    margin: auto;
+    margin-left: 50px;
+    list-style: none;
 }
 
 /*início Modal*/
@@ -136,6 +241,7 @@ dialog{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: Arial;
 }
 
 input, select, textarea {
@@ -174,10 +280,15 @@ dialog p.erro{
     background-color: rgb(255, 190, 190);
     color: rgb(86, 2, 2);
     text-align: center;
+    border-radius: 10px;
 }
 /* Fim Modal*/
 
 h2{
     text-align: center;
     padding: 10px;
+}
+
+a:hover{
+    color: #532a13;
 }
