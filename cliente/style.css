@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'LavishlyYours';
-    src: url('fontes/LavishlyYours-Regular.ttf') ;
+    src: url('../fontes/LavishlyYours-Regular.ttf') ;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('fontes/Poppins/Poppins-Light.ttf') ;
+    src: url('../fontes/Poppins/Poppins-Light.ttf') ;
 }
 
 @font-face {
     font-family: 'Playfair';
-    src: url('fontes/Playfair_Display/normal.ttf');
+    src: url('../fontes/Playfair_Display/normal.ttf');
 }
 
 *{
@@ -61,7 +61,7 @@ a:hover{
     text-shadow: 0px 0.5px #532a13;
 }
 
-#container-opcoes, #container-login{
+#container-opcoes, #container-aval-sair{
     display: flex;
     list-style: none;
     justify-content: space-between;
@@ -74,13 +74,13 @@ a:hover{
     justify-content: space-between;
 }
 
-#container-login{
+#container-aval-sair{
     width: 20%;
     margin-right: 2%;
     justify-content: space-around;
 }
 
-#container-login:last-child{
+#container-aval-sair:last-child{
     margin-left: auto;
 }
 
@@ -254,9 +254,6 @@ button:hover { background-color: #0056b3; }
 
 button[type="button"]{ background-color: #f5b049; }
 button[type="button"]:hover{ background-color: #ac7727; }
-
-button#cadastrar{ background-color: green; }
-button#cadastrar:hover{ background-color: #005700; }
 
 dialog button{ margin-top: 20px;}
 
