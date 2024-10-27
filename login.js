@@ -54,7 +54,9 @@ formAdmin.addEventListener('submit', (evento) => {
     }
 });
 
+// -- Cliente --
 // Cadastro
+
 const btnCadastrarClt = document.getElementById('cadastrar');
 const cadastrarClt = document.getElementById('cadastrarCliente');
 const formCadastro = document.getElementById('formCadastro');
@@ -64,6 +66,17 @@ let dadosClientes = [
     { nome: "laura", email: "laura@email.com", senha: "laura"},
     { nome: "pedro", email: "pedro@email.com", senha: "pedro"}
 ];
+
+// Verificar se já existe algo no localStorage ao carregar a página
+if (!localStorage.getItem('dadosClientes')) {
+    // Se não houver dados no localStorage, adicionar os clientes iniciais
+    localStorage.setItem('dadosClientes', JSON.stringify(dadosClientes));
+} 
+// Se houver dados no localStorage, carregar esses dados no array dadosClientes
+else {
+    // Se houver dados no localStorage, carregar esses dados no array dadosClientes
+    dadosClientes = JSON.parse(localStorage.getItem('dadosClientes'));
+}
 
 btnCadastrarClt.onclick = function(){
     loginCliente.close();
@@ -77,24 +90,19 @@ formCadastro.addEventListener('submit', function(evento){
     const emailCad = document.getElementById('emailCad').value;
     const senhaCad = document.getElementById('senhaCad').value;
 
-    localStorage.setItem('nome', nomeCad);
-    localStorage.setItem('email', emailCad);
-    localStorage.setItem('senha', senhaCad);
+    // Adiciona o novo cliente ao array de dadosClientes
+    dadosClientes.push({ nome: nomeCad, email: emailCad, senha: senhaCad });
 
-    dadosClientes.push({nome: nomeCad, email: emailCad, senha: senhaCad});
+    // Atualiza o localStorage com todo o array dadosClientes
+    localStorage.setItem('dadosClientes', JSON.stringify(dadosClientes));
 
     alert('Usuário Cadastrado');
     formCadastro.reset();
     cadastrarClt.close();
-
-
 });
 
-
-// -- Cliente --
 const btnCliente = document.getElementById('btnCliente');
 const btnFecharClt = document.getElementById('btnFecharClt');
-
 
 btnCliente.onclick = function(){
     loginCliente.showModal();
@@ -119,7 +127,11 @@ formCliente.addEventListener('submit', (evento) => {
     let senha = document.getElementById('senhaCliente').value;
     let clienteEncontrado = false;
 
-    dadosClientes.forEach(item =>{
+    // Carregar dados do localStorage
+    const clientesSalvos = JSON.parse(localStorage.getItem('dadosClientes')) || [];
+
+    // Verifica se o email e senha coincidem com algum cliente
+    clientesSalvos.forEach(item =>{
         if(email === item.email && senha === item.senha){
             sessionStorage.setItem('clienteLogado', 'true');
             sessionStorage.setItem('nomeCliente', item.nome);
