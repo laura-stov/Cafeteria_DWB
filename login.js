@@ -54,9 +54,47 @@ formAdmin.addEventListener('submit', (evento) => {
     }
 });
 
+// Cadastro
+const btnCadastrarClt = document.getElementById('cadastrar');
+const cadastrarClt = document.getElementById('cadastrarCliente');
+const formCadastro = document.getElementById('formCadastro');
+
+let dadosClientes = [
+    { nome: "jhully", email: "jhully@email.com", senha: "jhully" },
+    { nome: "laura", email: "laura@email.com", senha: "laura"},
+    { nome: "pedro", email: "pedro@email.com", senha: "pedro"}
+];
+
+btnCadastrarClt.onclick = function(){
+    loginCliente.close();
+    cadastrarClt.showModal();
+}
+
+formCadastro.addEventListener('submit', function(evento){
+    evento.preventDefault();
+
+    const nomeCad = document.getElementById('nomeCad').value;
+    const emailCad = document.getElementById('emailCad').value;
+    const senhaCad = document.getElementById('senhaCad').value;
+
+    localStorage.setItem('nome', nomeCad);
+    localStorage.setItem('email', emailCad);
+    localStorage.setItem('senha', senhaCad);
+
+    dadosClientes.push({nome: nomeCad, email: emailCad, senha: senhaCad});
+
+    alert('Usuário Cadastrado');
+    formCadastro.reset();
+    cadastrarClt.close();
+
+
+});
+
+
 // -- Cliente --
 const btnCliente = document.getElementById('btnCliente');
 const btnFecharClt = document.getElementById('btnFecharClt');
+
 
 btnCliente.onclick = function(){
     loginCliente.showModal();
@@ -68,12 +106,6 @@ btnFecharClt.onclick = function(){
 
 const loginCliente = document.getElementById('loginCliente');
 const formCliente = document.querySelector('#loginCliente form');
-
-let dadosClientes = [
-    { nome: "jhully", email: "jhully@email.com", senha: "jhully" },
-    { nome: "laura", email: "laura@email.com", senha: "laura"},
-    { nome: "pedro", email: "pedro@email.com", senha: "pedro"}
-];
 
 formCliente.addEventListener('submit', (evento) => {
     evento.preventDefault();

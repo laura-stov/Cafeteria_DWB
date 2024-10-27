@@ -1,29 +1,38 @@
+@font-face {
+    font-family: 'LavishlyYours';
+    src: url('fontes/LavishlyYours-Regular.ttf') ;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fontes/Poppins/Poppins-Light.ttf') ;
+}
+
+@font-face {
+    font-family: 'Playfair';
+    src: url('fontes/Playfair_Display/normal.ttf');
+}
+
 *{
     padding: 0;
     margin: 0;
 }
 
 body{
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
     background: linear-gradient(180deg, #733009, #D9A86C);
     background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
 }
 
 header{
     background-color: #e0dede;
-    width:  100%;
     height: 70px;
     display: flex;
-    position:fixed;
-    top: 0;
-    left: 0;
-    gap: 100px;
+    padding: 10px;
     z-index: 3;
-    border-bottom: 1px solid #d7d5d5;
 }
 
 .logo{
@@ -32,16 +41,9 @@ header{
     margin-left: 50px;
 }
 
-/*.fundo-nav{
-    position: fixed;
-    width: 100%;
-    height: 70px;
-    background-color: #fff3e1;
-}*/
 nav{
     display: flex;
-    position: static;
-    top: 0;
+    flex-wrap: wrap;
     width: 100%;
     height: 70px;
 }
@@ -54,38 +56,38 @@ nav a{
     font-weight: bold;
 }
 
-#container-opcoes, #container-login{
-    /*border: 1px solid black;*/
-    height: 70px;
-    justify-content: space-around;
+a:hover{
+    color: #532a13;
+    text-shadow: 0px 0.5px #532a13;
 }
-    
+
+#container-opcoes, #container-login{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    height: 70px;
+}
+
 #container-opcoes{
-    width: 30%;
+    width: 40%;
     margin-left: 20%;
-    align-items: center;
+    justify-content: space-between;
 }
 
 #container-login{
-    width: 15%;
-    right: 5%;
-    align-items: center;
+    width: 20%;
+    margin-right: 2%;
+    justify-content: space-around;
 }
 
 #container-login:last-child{
     margin-left: auto;
-    position: fixed;
-}
-
-#btnCliente{
-    margin-right: 20%;
 }
 
 #home{
     width: 100%;
     height: 600px;
     display: grid;
-    border: 1px solid black;
 }
 
 .img1{
@@ -116,20 +118,6 @@ nav a{
     height: 300px;
 }
 
-@font-face {
-    font-family: 'LavishlyYours';
-    src: url('fontes/LavishlyYours-Regular.ttf') ;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('fontes/Poppins/Poppins-Light.ttf') ;
-}
-
-@font-face {
-    font-family: 'Playfair';
-    src: url('fontes/Playfair_Display/normal.ttf');
-}
 .titulo{
     font-family: 'LavishlyYours';
     font-size: 80px;
@@ -287,8 +275,4 @@ dialog p.erro{
 h2{
     text-align: center;
     padding: 10px;
-}
-
-a:hover{
-    color: #532a13;
 }
