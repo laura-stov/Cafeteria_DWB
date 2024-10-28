@@ -19,8 +19,8 @@
                 <li><a href="#novidades">Novidades</a></li>
                 <li><a href="#promocoes">Promoções</a></li>
             </ul>
-            <ul id="container-aval-sair">
-                <li> <a href="#avaliacao" id="btnAvaliacao"><i class="fa fa-solid fa-star"></i> Avaliações</a></li>
+            <ul id="container-sair">
+                <li> <a href="#conta" id="btnConta"><i class="fa fa-solid fa-star"></i> Conta</a></li>
                 <li><a href="../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
             </ul>          
         </nav>
@@ -80,6 +80,75 @@
 
             </div>
         </div>
+
+        
+        <div id="avaliacoes" class="avaliacoes">
+            <h2>Avaliações</h2>
+            <form>
+                <div id="estrelas">
+                <button id="1-estrela" class="estrela" type="button">
+                    <img src="../img/estrela.png" alt="estrelas" id="img1" />
+                </button>
+                <button id="2-estrela" class="estrela" type="button">
+                    <img src="../img/estrela.png" alt="estrelas" id="img2" />
+                </button>
+                <button id="3-estrela" class="estrela" type="button">
+                    <img src="../img/estrela.png" alt="estrelas" id="img3" />
+                </button>
+                <button id="4-estrela" class="estrela" type="button">
+                    <img src="../img/estrela.png" alt="estrelas" id="img4" />
+                </button>
+                <button id="5-estrela" class="estrela" type="button">
+                    <img src="../img/estrela.png" alt="estrelas" id="img5" />
+                </button>
+                </div>
+                <div id="input-dados">
+                <input type="text" name="nome-avaliacao" id="nome-avaliacao" placeholder="Nome" class="dados"/>
+                <input type="email" name="email-avaliacao" id="email-avaliacao" placeholder="Email" class="dados"/>
+                </div>
+                <div id="container-textarea">
+                <textarea name="textarea" id="texto" placeholder="Digite sua Avaliaçâo/experiencia aqui"></textarea>
+                </div>
+                <div id="preferencias">
+                <label for="checkboxemail" id="extras">Deseja receber promoções e novidades pelo email?</label>
+                <input type="checkbox" name="checkboxemail" id="checkboxemail" />
+                <label for="checkboxrecomendacao">Recomenda a nossa cafeteria?</label>
+                <input type="checkbox" name="checkboxrecomendacao" id="checkboxrecomendacao"/>
+                </div>
+                <div id="enviar-avaliacao">
+                <input type="submit" id="enviar" value="Enviar" />
+                </div>
+
+                <dialog id="avaliacao">
+                <div id="result">
+
+                </div>
+                <button id="btnFecharAva" class="fecharAva">Fechar</button>
+                </dialog>
+            </form>
+        </div>
+
+        <dialog id="conta">
+            <h2>Informações da conta</h2>
+            <div id="informacoes">
+                <table id="tabela-info">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Senha</th>
+                            <th>Opções</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody-info">
+                        
+                    </tbody>
+                </table>
+            </div>
+
+            
+            <button id="btnVoltar" type="button">Voltar</button>
+        </dialog>
     </main>
     <footer>
         <div class="logo-footer">
@@ -92,5 +161,8 @@
             <li>Curitiba - Rua Joãozinho, 789</li>
         </ul>
     </footer>
+    <script src="./estrela.js"></script>
+    <script src="./mostrar.js"></script>
+    <script src="./avaliacao.js"></script>
 </body>
 </html>

@@ -60,7 +60,7 @@ formAdmin.addEventListener('submit', (evento) => {
 const btnCadastrarClt = document.getElementById('cadastrar');
 const cadastrarClt = document.getElementById('cadastrarCliente');
 const formCadastro = document.getElementById('formCadastro');
-
+const btnFecharCad = document.getElementById('btnFecharCad')
 let dadosClientes = [
     { nome: "jhully", email: "jhully@email.com", senha: "jhully" },
     { nome: "laura", email: "laura@email.com", senha: "laura"},
@@ -81,6 +81,10 @@ else {
 btnCadastrarClt.onclick = function(){
     loginCliente.close();
     cadastrarClt.showModal();
+}
+
+btnFecharCad.onclick = function(){
+    cadastrarClt.close();
 }
 
 formCadastro.addEventListener('submit', function(evento){
@@ -136,6 +140,10 @@ formCliente.addEventListener('submit', (evento) => {
             sessionStorage.setItem('clienteLogado', 'true');
             sessionStorage.setItem('nomeCliente', item.nome);
             clienteEncontrado = true;
+
+            const clienteLogado = {nome: item.nome, email: item.email, senha: item.senha};
+            localStorage.setItem('clienteLogado', JSON.stringify(clienteLogado));
+
 
             window.location.href="./cliente/index.html";
         }

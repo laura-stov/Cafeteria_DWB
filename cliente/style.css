@@ -61,7 +61,7 @@ a:hover{
     text-shadow: 0px 0.5px #532a13;
 }
 
-#container-opcoes, #container-aval-sair{
+#container-opcoes, #container-sair{
     display: flex;
     list-style: none;
     justify-content: space-between;
@@ -74,13 +74,12 @@ a:hover{
     justify-content: space-between;
 }
 
-#container-aval-sair{
+#container-sair{
     width: 20%;
-    margin-right: 2%;
     justify-content: space-around;
 }
 
-#container-aval-sair:last-child{
+#container-sair:last-child{
     margin-left: auto;
 }
 
@@ -275,4 +274,236 @@ dialog p.erro{
 h2{
     text-align: center;
     padding: 10px;
+}
+
+/*tabela cliente*/
+
+#conta{
+    width: 80%;
+}
+#informacoes{
+    display: flex;
+    background-color: #e0dede;
+    width: 100%;
+    height: 500px;
+}
+
+table{
+    margin: auto;
+    margin-top: 5%;
+    width: 60%;
+    border-collapse: collapse;
+}
+
+th{
+    background-color: #733009;
+    color: #e0dede;
+}
+td, th{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+tbody{
+    border: 1px solid black;
+}
+
+.button-edit{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    font-size: 1em;
+    color: black;
+    cursor: pointer;
+}
+.button-edit:hover{
+    background-color: transparent;
+    text-decoration:underline;
+}
+
+input{
+    border: 1px solid black;
+}
+
+/* Avaliação*/
+
+.avaliacoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#bff2ff56;
+    width: auto;
+    height: auto;
+}
+
+.estrela{
+    margin-left: 80px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    background: none;
+    width: 20px;
+    height: 10px;
+    padding: 10px;
+}
+
+.estrela img{
+    width: 48px;
+    height: 48px;
+}
+
+.estrela button{
+    padding: 17px 40px;
+    margin: 20px;
+    width: 48px;
+    height: 48px;
+}
+
+#avaliacoes textarea{
+    margin-left: 24px;
+    margin-top: 24px;
+    width: 600px;
+    height: 150px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    resize: none;
+    font-size: 16px;
+    color: #333;
+    background-color: #fafafa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+
+#input-dados{
+    margin-top: 24px;
+    display: flex;
+    gap: 10px;
+}
+
+.dados{
+    padding: 12px 16px;
+    display: block;
+    border-radius: 24px;
+    width: 307px;
+    outline: none;
+}
+
+.dados::placeholder{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+#enviar-avaliacao{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#enviar{
+    padding: 12px 16px;
+    display: block;
+    border-radius: 24px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    border: none;
+    transition: 0.4s ease-in-out;
+}
+
+#enviar:hover{
+    border: none;
+    background-color:  rgb(128, 74, 12);
+    color: rgb(216, 175, 113);
+}
+
+.img-lado-nome {
+    height: 35px; 
+    gap: 5px; 
+}
+ 
+.img-lado-nome img {
+    height: 100%; 
+    width: auto;
+}
+
+.info-avaliacao {
+    margin-top: 30px;
+    display: flex;
+}
+
+.info-avaliacao img{
+    margin-top: 4px;
+}
+
+.comentario{
+    /*border: 1px solid black;*/
+    margin-top: 10px;
+    font-size: 30px;
+    width: 700px;
+}
+
+.nome{
+    color: black;
+    font-size: 40px;
+}
+
+.email{
+    font-size: 15px;
+    color: gray;
+}
+
+.horario{
+    margin-top: 24px;
+}
+
+.hr{
+    width: 100%;
+    height: 2px;
+    order: none;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+
+#preferencias{
+    display: flex;
+    font-size: 20px;
+}
+
+#checkboxemail, #checkboxrecomendacao{
+    display: flex;
+    width: 15px;
+    height: 15px;
+    margin-bottom: 10px; /* adiciona espaço entre as linhas */
+    color: #333; /* define a cor do texto */
+}
+
+#avaliacoes button[type="button"]{ background-color: transparent; }
+
+#avaliacoes dialog{
+    width: 80%;
+    height: 60%;
+}
+
+.fecharAva{
+    padding: 12px 16px;
+    display: flex;
+    border-radius: 24px;
+    display: block;
+    width: 100px;
+    background-color: black;
+    color: white;
+    border: none;
+    transition: 0.4s ease-in-out;
+}
+
+.fecharAva:hover{
+    color: white;
+    background-color: red;
 }
