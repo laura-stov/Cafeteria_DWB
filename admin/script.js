@@ -7,12 +7,12 @@ let nomeProduto = document.getElementById('nomeProduto');
 let quantidade = document.getElementById('quantidade');
 
 // Recuperado QueryParam
-const key = new URLSearchParams(window.location.search).get('chave');
+const chavePedido = new URLSearchParams(window.location.search).get('chavePedido');
 
 // Preenchendo o formulário em caso de alteração
-if (key) {
-    nomeProduto.value = dadosPedido[key].nomeProduto;
-    quantidade.value = dadosPedido[key].quantidade;
+if (chavePedido) {
+    nomeProduto.value = dadosPedido[chavePedido].nomeProduto;
+    quantidade.value = dadosPedido[chavePedido].quantidade;
     document.querySelector('#formPedido button[type="submit"]').innerText = "Alterar";
 }
 
@@ -25,6 +25,7 @@ document.getElementById('formPedido').addEventListener('reset', function (e) {
 // Fazer pedido 
 document.getElementById('formPedido').addEventListener('submit', function (e) {
     e.preventDefault();
+    const chavePedido = new URLSearchParams(window.location.search).get('chavePedido');
 
     // Remover mensagens de erro anteriores
     removerMensagensErro();
@@ -55,7 +56,7 @@ document.getElementById('formPedido').addEventListener('submit', function (e) {
     };
 
     // Caso não exista a chave o produto é adicionado, se não ele é alterado
-    (!key) ? dadosPedido.push(produto) : dadosPedido[key] = produto;
+    (!chavePedido) ? dadosPedido.push(produto) : dadosPedido[chavePedido] = produto;
 
     // Atualizando o LocalStorage
     localStorage.setItem('dadosPedido', JSON.stringify(dadosPedido));
@@ -108,7 +109,7 @@ function atualizarPedido() {
             <td>${qtdeFormatada}</td>
             <td>${dataFormatada}</td>
             <td>
-                <a href="?chave=${index}">Editar</a>
+                <a href="?chavePedido=${index}">Editar</a>
                 <a href="#" onclick="removerProduto(${index})">Excluir</a>
             </td>
         `;
@@ -130,12 +131,12 @@ let nomeComida = document.getElementById('nomeComida');
 let preco = document.getElementById('preco');
 let secao = document.getElementById('secao');
 
-const chave = new URLSearchParams(window.location.search).get('chave');
+const chaveSugestao = new URLSearchParams(window.location.search).get('chaveSugestao');
 
-if (chave) {
-    nomeComida.value = dadosSugestao[chave].nomeComida;
-    preco.value = dadosSugestao[chave].preco;
-    secao.value = dadosSugestao[chave].secao;
+if (chaveSugestao) {
+    nomeComida.value = dadosSugestao[chaveSugestao].nomeComida;
+    preco.value = dadosSugestao[chaveSugestao].preco;
+    secao.value = dadosSugestao[chaveSugestao].secao;
     document.querySelector('#formSugestao button[type="submit"]').innerText = "Alterar";
 }
 
@@ -146,6 +147,7 @@ document.getElementById('formSugestao').addEventListener('reset', function (e) {
 
 document.getElementById('formSugestao').addEventListener('submit', function (e) {
     e.preventDefault();
+    const chaveSugestao = new URLSearchParams(window.location.search).get('chaveSugestao');
 
     removerMensagensErro();
 
@@ -177,7 +179,7 @@ document.getElementById('formSugestao').addEventListener('submit', function (e) 
         secao: secao.value
     };
 
-    (!chave) ? dadosSugestao.push(sugestao) : dadosSugestao[chave] = sugestao;
+    (!chaveSugestao) ? dadosSugestao.push(sugestao) : dadosSugestao[chaveSugestao] = sugestao;
 
     localStorage.setItem('dadosSugestao', JSON.stringify(dadosSugestao));
 
@@ -214,7 +216,7 @@ function atualizarSugestao() {
             <td>${sugestao.secao}</td>
             <td>${precoFormatado}</td>
             <td>
-                <a href="?chave=${index}">Editar</a>
+                <a href="?chaveSugestao=${index}">Editar</a>
                 <a href="#" onclick="removerSugestao(${index})">Excluir</a>
             </td>
         `;
