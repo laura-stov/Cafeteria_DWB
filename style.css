@@ -24,7 +24,7 @@ body{
     flex-direction: column;
     background: linear-gradient(180deg, #733009, #D9A86C);
     background-repeat: no-repeat;
-    width: 100%;
+    margin: 0;
 }
 
 header{
@@ -82,88 +82,6 @@ a:hover{
 
 #container-login:last-child{
     margin-left: auto;
-}
-
-#home{
-    width: 100%;
-    height: 600px;
-    display: grid;
-}
-
-.img1{
-    position: absolute;
-    width: 20%;
-    top: 44%;
-    left: 53%;
-    z-index: 1;
-}
-
-.img2{
-    position: absolute;
-    top: 20%;
-    left: 71%;
-    align-items: end;
-    width: 20%;
-    z-index: -1;
-}
-
-.titulos{
-    position: absolute;
-    margin-top: 150px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    width: 900px;
-    height: 300px;
-}
-
-.titulo{
-    font-family: 'LavishlyYours';
-    font-size: 80px;
-    color: #ddcbcb;
-}
-
-.texto1{
-    font-family: 'Poppins';
-    font-size: 25px;
-    color: #ddcbcb;
-}
-
-.titulo-categorias{
-    height: 75px;
-    font-family: 'Playfair';
-    font-size: 25px;
-    margin-top: 50px;
-    margin-left: 50px;
-    font-weight: 500;
-}
-
-#novidades{
-    display: flex;
-    width: 100%;
-    height: 600px;
-    background-color: #e0dede;
-}
-
-#promocoes{
-    display: flex;
-    width: 100%;
-    height: 600px;
-    background-color: #e0dede;
-}
-#lista-itens{
-    position: absolute;
-    display: inline-flex;
-}
-.item{
-    background-color: #f1f1f1;
-    border-radius: 25px;
-    margin-top: 150px;
-    margin-left: 50px;
-    border: 1px solid black;
-    height: 300px;
-    width: 300px;
 }
 
 .img-item-promocao{
@@ -278,4 +196,152 @@ dialog p.erro{
 h2{
     text-align: center;
     padding: 10px;
+} 
+
+/* AJUSTES */
+
+/*Novidades e Promoções*/
+
+#lista-itens {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas por padrão */
+    gap: 30px; /* Espaçamento entre os itens */
+    padding: 20px;
+}
+
+#novidades, #promocoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #e0dede;
+    padding: 20px 0;
+}
+
+.item {
+    background-color: #f1f1f1;
+    border-radius: 25px;
+    border: 1px solid black;
+    height: 300px;
+    padding: 15px;
+}
+
+.titulo-categorias{
+    font-family: 'Playfair';
+    font-size: 25px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+/*Início*/
+
+#home{
+    width: 100%;
+    height: 600px;
+    display: grid;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.img1{
+    border-radius: 15px;
+    position: absolute;
+    width: 300px;
+    left: 54%;
+    bottom: 23%;
+    z-index: 1;
+}
+
+.img2{
+    border-radius: 15px;
+    position: absolute;
+    width: 300px;
+    left: 72%;
+    z-index: -1;
+}
+
+.titulos{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 900px;
+    height: 300px;
+}
+
+.titulo{
+    font-family: 'LavishlyYours';
+    font-size: 80px;
+    color: #ddcbcb;
+}
+
+.texto1{
+    font-family: 'Poppins';
+    font-size: 25px;
+    color: #ddcbcb;
+}
+
+/*Media*/
+
+@media (max-width: 1490px) {
+    #lista-itens {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+    .img1, .img2{
+        display: none;
+    }
+
+    .titulos{
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1115px) {
+    #lista-itens {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 750px) {
+    #lista-itens {
+        grid-template-columns: 1fr; 
+    }
+
+    .titulo{
+        font-size: 45px;
+    }
+
+    .texto1{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 370px) {
+    #lista-itens {
+        grid-template-columns: 1fr;
+    }
+
+    .item {
+        height: auto; /*Permite que a altura se ajuste ao conteúdo*/
+        padding: 10px; /*Reduz o padding para caber melhor*/
+        width: 90%; /*Ajuste de largura para caber melhor na tela*/
+        margin: 0 auto; /*Centraliza o item*/
+    }
+
+    .item img {
+        width: 100%; /*Ajusta a imagem para ocupar toda a largura da caixa*/
+        height: auto; /*Mantém a proporção da imagem*/
+        border-radius: 15px; /*Ajusta o arredondamento para caber no layout menor*/
+    }
+
+    .titulo{
+        font-size: 45px;
+    }
+
+    .texto1{
+        font-size: 15px;
+    }
 }
