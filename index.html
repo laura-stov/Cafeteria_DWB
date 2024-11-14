@@ -2,150 +2,143 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/63c0865c2d.js" crossorigin="anonymous"></script>
-    <script src="./script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 </head>
 <body>
-    <div class="grid-container">
-        <header class="header">
-            <div id="container-logo">
-                <img class="logo" src="./img/cafe-da-manha.png" alt="LOGO">
+    <header>
+        <nav>
+            <img id="logo" src="./img/cafe-da-manha.png" alt="LOGO">
+            <ul id="container-opcoes">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#novidades">Novidades</a></li>
+                <li><a href="#promocoes">Promoções</a></li>
+            </ul>
+            <ul id="container-login">
+                <li> <a href="#loginCliente" id="btnCliente"><i class="fa fa-solid fa-users"></i> Cliente</a></li>
+                <li><a href="#loginAdmin" id="btnAdmin"><i class="fa-solid fa-user-tie"></i> Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <div class="text-content">
+                <p class="titulo">Bem-vindo ao Cafézinho</p>
+                <p class="texto1">Confira as melhores opções de café da cidade! <br>
+                    Vá até uma de nossas lojas mais próximas de você <br>e prove nossas receitas!</p>
             </div>
-            <nav>
-                <ul id="container-opcoes">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#novidades">Novidades</a></li>
-                    <li><a href="#promocoes">Promoções</a></li>
-                </ul>
-                <ul id="container-login">
-                    <li> <a href="#loginCliente" id="btnCliente"><i class="fa fa-solid fa-users"></i> Cliente</a></li>
-                    <li><a href="#loginAdmin" id="btnAdmin"><i class="fa-solid fa-user-tie"></i> Admin</a></li>
-                </ul>          
-            </nav>
-        </header>
-        <main class="main">
-            <div id="home">
-                <div class="titulos">
-                    <p class="titulo">Bem-vindo ao Cafézinho</p>
-                    <p class="texto1">Confira as melhores opções de café da cidade! <br>
-                        Vá até uma de nossas lojas mais próximas de você <br>e prove nossas receitas!</p>
-                </div>
+            <div class="images">
                 <img class="img1" src="img/inicio4.jpg" alt="IMG">
                 <img class="img2" src="img/inicio5.jpg" alt="IMG2">
             </div>
-    
-            <div id="novidades">
-                <p class="titulo-categorias"><i class="fa-solid fa-bullhorn fa-rotate-by" style="--fa-rotate-angle: 335deg;"></i> Novidades</p>
-                <div id="lista-itens">
-                    <div class="item">
-                        <img class="img-item-promocao" src="img/item3.jpg" alt="">
-                        <p class="nome-item">Macchiato de Caramelo</p>
-                        <p class="preco-item">R$ 20,00</p>
-                    </div>
-    
-                    <div class="item">
-                        <img class="img-item-promocao" src="img/item5.jpeg" alt="">
-                        <p class="nome-item">Espresso Con Panna</p>
-                        <p class="preco-item">R$ 16,00</p>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            
-            <div id="promocoes">
-                <p class="titulo-categorias"><i class="fa-solid fa-comments-dollar"></i> Promoções</p>
-                <div id="lista-itens">
-                    <div class="item">
-                        <img class="img-item-promocao" src="img/item1.jpeg" alt="">
-                        <p class="nome-item">Cappuccino</p>
-                        <p class="preco-desc">R$ 15,00</p>
-                        <p class="preco-item">R$ 13,00</p>
-                    </div>
-    
-                    <div class="item">
-                        <img class="img-item-promocao" src="img/item2.jpg" alt="">
-                        <p class="nome-item">Café com leite</p>
-                        <p class="preco-desc">R$ 10,00</p>
-                        <p class="preco-item">R$ 7,00</p>
-                    </div>
-    
-                    <div class="item">
-                        <img class="img-item-promocao" src="img/item4.jpeg" alt="">
-                        <p class="nome-item">Mocha Latte</p>
-                        <p class="preco-desc">R$ 20,00</p>
-                        <p class="preco-item">R$ 15,00</p>
-                    </div>
+        </section>
 
-                    <div class="item">
-                        <img class="img-item-promocao" src="img/item4.jpeg" alt="">
-                        <p class="nome-item">Teste</p>
-                        <p class="preco-desc">R$ 10.00</p>
-                        <p class="preco-item">R$ 8.50</p>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <dialog id="loginAdmin">
-            <form>
-                <h2>Login</h2>
-                    <label for="email"> E-mail:</label>
-                    <input type="text" name="email" id="email"><br>
-                    <label for="senha"> Senha: </label>
-                    <input type="password" name="senha" id="senha"><br>
-                    <button type="button" id="btnFecharAdm">Sair</button>
-                    <button type="submit">Entrar</button>
-            </form>
-        </dialog>
+    
+        <section id="novidades"> 
+            <p class="titulo-categorias"><i class="fa-solid fa-bullhorn fa-rotate-by" style="--fa-rotate-angle: 335deg;"></i> Novidades</p>
+            
+            <ul class="lista-itens">
+                <li>
+                    <img src="img/item3.jpg" alt="">
+                    <p class="nome-item">Macchiato de Caramelo</p>
+                    <p class="preco-item">R$ 20,00</p>
+                </li>
+
+                <li>
+                    <img src="img/item5.jpeg" alt="">
+                    <p class="nome-item">Espresso Con Panna</p>
+                    <p class="preco-item">R$ 16,00</p>
+                </li>
+            </ul>
+        </section>
         
-        <dialog id="loginCliente">
-            <form>
-                <h2>Login</h2>
-                    <label for="emailCliente"> E-mail:</label>
-                    <input type="text" name="email" id="emailCliente"><br>
-                    <label for="senhaCliente"> Senha: </label>
-                    <input type="password" name="senha" id="senhaCliente"><br>
-                    <button type="button" id="btnFecharClt">Sair</button>
-                    <button type="submit">Entrar</button>
-                    <button type="button" id="cadastrar">Cadastrar</button>
-            </form>
-        </dialog>
-    
-        <dialog id="cadastrarCliente">
-            <form id="formCadastro">
-                <h2>Cadastrar</h2>
-                    <label for="nome"> Nome:</label>
-                    <input type="text" name="nomeCad" id="nomeCad"><br>
-                    <label for="email"> E-mail:</label>
-                    <input type="text" name="email" id="emailCad"><br>
-                    <label for="senha"> Senha: </label>
-                    <input type="password" name="senha" id="senhaCad"><br>
-                    <button type="button" id="btnFecharCad">Sair</button>
-                    <button type="submit" id="enviarCad">Enviar</button>
-            </form>
-        </dialog>
-    
-        <footer class="footer">
-            <div class="logo-footer">
-                <img class="logo" src="./img/cafe-da-manha.png" alt="LOGO">
-                <p class="nome-footer">Instituto do Cafézinho</p>
-            </div> 
-            <ul class="lista-footer">Conheça as nossas lojas:
-                <li>São José dos Pinhais - Rua dos Limoeiros, 123</li>
-                <li>Pinhais - Rua Mariazinha, 456</li>
-                <li>Curitiba - Rua Joãozinho, 789</li>
+        <section id="promocoes">
+            <p class="titulo-categorias"><i class="fa-solid fa-comments-dollar"></i> Promoções</p>
+            <ul class="lista-itens">
+                <li>
+                    <img src="img/item1.jpeg" alt="">
+                    <p class="nome-item">Cappuccino</p>
+                    <p class="preco-desc">R$ 15,00</p>
+                    <p class="preco-item">R$ 13,00</p>
+                </li>
+                <li>
+                    <img src="img/item2.jpg" alt="">
+                    <p class="nome-item">Café com leite</p>
+                    <p class="preco-desc">R$ 10,00</p>
+                    <p class="preco-item">R$ 7,00</p>
+                </li>
+                <li>
+                    <img src="img/item4.jpeg" alt="">
+                    <p class="nome-item">Mocha Latte</p>
+                    <p class="preco-desc">R$ 20,00</p>
+                    <p class="preco-item">R$ 15,00</p>
+                </li>
+                <li>
+                    <img src="img/item4.jpeg" alt="">
+                    <p class="nome-item">Teste</p>
+                    <p class="preco-desc">R$ 10.00</p>
+                    <p class="preco-item">R$ 8.50</p>
+                </li>
             </ul>
+        </section>
+    </main>
+    <dialog id="loginAdmin">
+        <form>
+            <h2>Login</h2>
+            <label for="email"> E-mail:</label>
+            <input type="text" name="email" id="email"><br>
+            <label for="senha"> Senha: </label>
+            <input type="password" name="senha" id="senha"><br>
+            <button type="button" id="btnFecharAdm">Sair</button>
+            <button type="submit">Entrar</button>
+        </form>
+    </dialog>
     
-            <ul class="lista-footer">Criado por:
-                <li>Laura Santos Oliveira - 40434729</li>
-                <li>Jhully Kauany Ferreira - 39008436</li>
-                <li>Pedro Henrique Lins - 38175835</li>
-            </ul>
-        </footer>
-    </div>
-    <script src="./loginAdmin.js"></script>
-    <script src="./loginCliente.js"></script>
+    <dialog id="loginCliente">
+        <form>
+            <h2>Login</h2>
+            <label for="emailCliente"> E-mail:</label>
+            <input type="text" name="email" id="emailCliente"><br>
+            <label for="senhaCliente"> Senha: </label>
+            <input type="password" name="senha" id="senhaCliente"><br>
+            <button type="button" id="btnFecharClt">Sair</button>
+            <button type="submit">Entrar</button>
+            <button type="button" id="cadastrar">Cadastrar</button>
+        </form>
+    </dialog>
+
+    <dialog id="cadastrarCliente">
+        <form id="formCadastro">
+            <h2>Cadastrar</h2>
+            <label for="nome"> Nome:</label>
+            <input type="text" name="nomeCad" id="nomeCad"><br>
+            <label for="email"> E-mail:</label>
+            <input type="text" name="email" id="emailCad"><br>
+            <label for="senha"> Senha: </label>
+            <input type="password" name="senha" id="senhaCad"><br>
+            <button type="button" id="btnFecharCad">Sair</button>
+            <button type="submit" id="enviarCad">Enviar</button>
+        </form>
+    </dialog>
 </body>
+<footer>
+    <img src="./img/cafe-da-manha.png" alt="LOGO">
+    <p>Instituto do Cafézinho</p>
+    <ul class="lista-lojas">Conheça as nossas lojas:
+        <li>São José dos Pinhais - Rua dos Limoeiros, 123</li>
+        <li>Pinhais - Rua Mariazinha, 456</li>
+        <li>Curitiba - Rua Joãozinho, 789</li>
+    </ul>
+
+    <ul class="lista-criadores">Criado por:
+        <li>Laura Santos Oliveira - 40434729</li>
+        <li>Jhully Kauany Ferreira - 39008436</li>
+        <li>Pedro Henrique Lins - 38175835</li>
+    </ul>
+</footer>
+<script src="./loginAdmin.js"></script>
+<script src="./loginCliente.js"></script>
+<script src="./script.js"></script>
+<script src="https://kit.fontawesome.com/63c0865c2d.js" crossorigin="anonymous"></script>
 </html>
