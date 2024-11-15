@@ -1,4 +1,3 @@
-// Pegando os links do menu
 const menu = document.querySelectorAll('nav a');
 
 menu.forEach(link => {   
@@ -7,7 +6,6 @@ menu.forEach(link => {
         const href = link.getAttribute('href');
         const alvo = document.querySelector(href);
 
-        // Rolando a página até o id alvo
         if (alvo) {
             window.scroll({
                 top: alvo.offsetTop -20,
@@ -17,7 +15,6 @@ menu.forEach(link => {
    })
 });
 
-// Evento de Scroll
 window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
         menu.forEach( m =>{
@@ -29,5 +26,3 @@ window.addEventListener('scroll', () => {
         });
     }
 });
-
-

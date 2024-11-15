@@ -215,7 +215,7 @@ footer{
     list-style: none;
 }
 
-/*início Modal*/
+
 dialog{
     width: 30%;
     min-width: 300px;
@@ -224,7 +224,6 @@ dialog{
     border: 0px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    /*centralizando*/
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -269,14 +268,11 @@ dialog p.erro{
     text-align: center;
     border-radius: 10px;
 }
-/* Fim Modal*/
 
 h2{
     text-align: center;
     padding: 10px;
 }
-
-/*tabela cliente*/
 
 #conta{
     width: 80%;
@@ -326,8 +322,6 @@ tbody{
 input{
     border: 1px solid black;
 }
-
-/* Avaliação*/
 
 .avaliacoes{
     display: flex;
@@ -443,7 +437,6 @@ input{
 }
 
 .comentario{
-    /*border: 1px solid black;*/
     margin-top: 10px;
     font-size: 30px;
     width: 700px;
@@ -480,8 +473,8 @@ input{
     display: flex;
     width: 15px;
     height: 15px;
-    margin-bottom: 10px; /* adiciona espaço entre as linhas */
-    color: #333; /* define a cor do texto */
+    margin-bottom: 10px;
+    color: #333; 
 }
 
 #avaliacoes button[type="button"]{ background-color: transparent; }

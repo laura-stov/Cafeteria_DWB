@@ -1,4 +1,3 @@
-// -- Sugestões -- 
 let dadosSugestao = JSON.parse(localStorage.getItem('dadosSugestao')) || [];
 
 let nomeComida = document.getElementById('nomeComida');
@@ -72,10 +71,8 @@ function validarValorMonetario(valor) {
 function atualizarSugestao() {
     const tabela = document.querySelector('#tabelaSugestao tbody');
 
-    // Limpar a tabela antes de adicionar novos dados
     tabela.innerHTML = '';
 
-    // Verificando se há dados
     if (dadosSugestao.length === 0) {
         return; 
     }
@@ -98,7 +95,7 @@ function atualizarSugestao() {
     });
 }
 
-// Remover sugestão
+
 function removerSugestao(index) {
     dadosSugestao.splice(index, 1);
     localStorage.setItem('dadosSugestao', JSON.stringify(dadosSugestao));

@@ -32,7 +32,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// informações da conta
 
 const dialogConta = document.getElementById('conta');
 const btnConta = document.getElementById('btnConta');

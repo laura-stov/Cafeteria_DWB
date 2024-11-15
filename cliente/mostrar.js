@@ -1,7 +1,7 @@
 
 function mostrarAvaliacoes() {
     const resultadoContainer = document.getElementById("result");
-    resultadoContainer.innerHTML = ""; // Limpa o conteúdo anterior
+    resultadoContainer.innerHTML = ""; 
 
     const avaliacoes = JSON.parse(localStorage.getItem("avaliacoes")) || [];
 
@@ -10,7 +10,7 @@ function mostrarAvaliacoes() {
         const info_avaliacao = document.createElement("div");
         info_avaliacao.classList.add("info-avaliacao");
 
-        // Cria os elementos de exibição para cada avaliação
+
         const avatar = document.createElement("img");
         avatar.src = "../img/usuario-de-perfil.png"
         avatar.classList.add("img-lado-nome");
@@ -45,7 +45,6 @@ function mostrarAvaliacoes() {
             estrelas_avaliacao.appendChild(estrela);
         }
 
-        // Adiciona cada elemento ao div da avaliação
         info_avaliacao.appendChild(avatar);
         info_avaliacao.appendChild(nome_avaliacao);
         div_avaliacao.appendChild(info_avaliacao);
@@ -54,10 +53,9 @@ function mostrarAvaliacoes() {
         div_avaliacao.appendChild(textarea_avaliacao);
         div_avaliacao.appendChild(data_avaliacao);
         div_avaliacao.appendChild(hr);
-        // Adiciona a div da avaliação ao container de resultados
+        
         resultadoContainer.appendChild(div_avaliacao);
     });
 }
 
-// Chama a função para exibir as avaliações ao carregar a página
 mostrarAvaliacoes();
