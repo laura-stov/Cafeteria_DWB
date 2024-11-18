@@ -10,7 +10,6 @@ function mostrarAvaliacoes() {
         const info_avaliacao = document.createElement("div");
         info_avaliacao.classList.add("info-avaliacao");
 
-
         const avatar = document.createElement("img");
         avatar.src = "../img/usuario-de-perfil.png"
         avatar.classList.add("img-lado-nome");

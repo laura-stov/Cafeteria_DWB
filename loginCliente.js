@@ -6,7 +6,7 @@ const btnCliente = document.getElementById('btnCliente');
 const btnFecharClt = document.getElementById('btnFecharClt');
 const loginCliente = document.getElementById('loginCliente');
 const formCliente = document.querySelector('#loginCliente form');
-e
+
 let dadosClientes = [
     { nome: "jhully", email: "jhully@email.com", senha: "jhully" },
     { nome: "laura", email: "laura@email.com", senha: "laura" },

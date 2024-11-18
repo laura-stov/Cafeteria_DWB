@@ -10,10 +10,9 @@
 </head>
 <body>
     <header>
-        <div id="container-logo">
-            <img class="logo" src="../img/cafe-da-manha.png" alt="LOGO">
-        </div>
+        
         <nav>
+            <img src="../img/cafe-da-manha.png" alt="LOGO">
             <ul id="container-opcoes">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#novidades">Novidades</a></li>
@@ -26,111 +25,69 @@
         </nav>
     </header>
     <main>
-        <div id="home">
-            <div class="titulos">
+        <section id="home">
+            <div class="text-content">
                 <p class="titulo">Bem-vindo ao Cafézinho</p>
                 <p class="texto1">Confira as melhores opções de café da cidade! <br>
                     Vá até uma de nossas lojas mais próximas de você <br>e prove nossas receitas!</p>
             </div>
-            <img class="img1" src="../img/inicio4.jpg" alt="IMG">
-            <img class="img2" src="../img/inicio5.jpg" alt="IMG2">
-        </div>
+            <div class="images">
+                <img class="img1" src="../img/inicio4.jpg" alt="IMG">
+                <img class="img2" src="../img/inicio5.jpg" alt="IMG2">
+            </div>
+        </section>
 
-        <div id="novidades">
+        <section id="novidades"> 
             <p class="titulo-categorias"><i class="fa-solid fa-bullhorn fa-rotate-by" style="--fa-rotate-angle: 335deg;"></i> Novidades</p>
-            <div id="lista-itens">
-                <div class="item">
-                    <img class="img-item-promocao" src="../img/item3.jpg" alt="">
+            
+            <ul class="lista-itens">
+                <li>
+                    <img src="../img/item3.jpg" alt="">
                     <p class="nome-item">Macchiato de Caramelo</p>
                     <p class="preco-item">R$ 20,00</p>
-                </div>
+                </li>
 
-                <div class="item">
-                    <img class="img-item-promocao" src="../img/item5.jpeg" alt="">
+                <li>
+                    <img src="../img/item5.jpeg" alt="">
                     <p class="nome-item">Espresso Con Panna</p>
                     <p class="preco-item">R$ 16,00</p>
-                </div>
-            </div>
-        </div>
-        <hr>
+                </li>
+            </ul>
+        </section>
         
-        <div id="promocoes">
+        <section id="promocoes">
             <p class="titulo-categorias"><i class="fa-solid fa-comments-dollar"></i> Promoções</p>
-            <div id="lista-itens">
-                <div class="item">
-                    <img class="img-item-promocao" src="../img/item1.jpeg" alt="">
+            <ul class="lista-itens">
+                <li>
+                    <img src="../img/item1.jpeg" alt="">
                     <p class="nome-item">Cappuccino</p>
                     <p class="preco-desc">R$ 15,00</p>
                     <p class="preco-item">R$ 13,00</p>
-                </div>
-
-                <div class="item">
-                    <img class="img-item-promocao" src="../img/item2.jpg" alt="">
+                </li>
+                <li>
+                    <img src="../img/item2.jpg" alt="">
                     <p class="nome-item">Café com leite</p>
                     <p class="preco-desc">R$ 10,00</p>
                     <p class="preco-item">R$ 7,00</p>
-                </div>
-
-                <div class="item">
-                    <img class="img-item-promocao" src="../img/item4.jpeg" alt="">
+                </li>
+                <li>
+                    <img src="../img/item4.jpeg" alt="">
                     <p class="nome-item">Mocha Latte</p>
                     <p class="preco-desc">R$ 20,00</p>
                     <p class="preco-item">R$ 15,00</p>
-                </div>
+                </li>
+                <li>
+                    <img src="../img/item4.jpeg" alt="">
+                    <p class="nome-item">Teste</p>
+                    <p class="preco-desc">R$ 10.00</p>
+                    <p class="preco-item">R$ 8.50</p>
+                </li>
+            </ul>
+        </section>
 
-            </div>
-        </div>
-
-        
-        <div id="avaliacoes" class="avaliacoes">
-            <h2>Avaliações</h2>
-            <form>
-                <div id="estrelas">
-                <button id="1-estrela" class="estrela" type="button">
-                    <img src="../img/estrela.png" alt="estrelas" id="img1" />
-                </button>
-                <button id="2-estrela" class="estrela" type="button">
-                    <img src="../img/estrela.png" alt="estrelas" id="img2" />
-                </button>
-                <button id="3-estrela" class="estrela" type="button">
-                    <img src="../img/estrela.png" alt="estrelas" id="img3" />
-                </button>
-                <button id="4-estrela" class="estrela" type="button">
-                    <img src="../img/estrela.png" alt="estrelas" id="img4" />
-                </button>
-                <button id="5-estrela" class="estrela" type="button">
-                    <img src="../img/estrela.png" alt="estrelas" id="img5" />
-                </button>
-                </div>
-                <div id="input-dados">
-                <input type="text" name="nome-avaliacao" id="nome-avaliacao" placeholder="Nome" class="dados"/>
-                <input type="email" name="email-avaliacao" id="email-avaliacao" placeholder="Email" class="dados"/>
-                </div>
-                <div id="container-textarea">
-                <textarea name="textarea" id="texto" placeholder="Digite sua Avaliaçâo/experiencia aqui"></textarea>
-                </div>
-                <div id="preferencias">
-                <label for="checkboxemail" id="extras">Deseja receber promoções e novidades pelo email?</label>
-                <input type="checkbox" name="checkboxemail" id="checkboxemail" />
-                <label for="checkboxrecomendacao">Recomenda a nossa cafeteria?</label>
-                <input type="checkbox" name="checkboxrecomendacao" id="checkboxrecomendacao"/>
-                </div>
-                <div id="enviar-avaliacao">
-                <input type="submit" id="enviar" value="Enviar" />
-                </div>
-
-                <dialog id="avaliacao">
-                <div id="result">
-
-                </div>
-                <button id="btnFecharAva" class="fecharAva">Fechar</button>
-                </dialog>
-            </form>
-        </div>
-
-        <dialog id="conta">
+        <dialog id="conta" class="meu-modal">
             <h2>Informações da conta</h2>
-            <div id="informacoes">
+            <section id="informacoes">
                 <table id="tabela-info">
                     <thead>
                         <tr>
@@ -144,8 +101,41 @@
                         
                     </tbody>
                 </table>
-            </div>
-
+            </section>
+             <div id="avaliacoes" class="avaliacoes">
+                <h2>Faça uma avaliação</h2>
+                <form>
+                    <div id="estrelas">
+                        <button id="1-estrela" class="estrela" type="button">
+                            <img src="../img/estrela.png" alt="estrelas" id="img1" />
+                        </button>
+                        <button id="2-estrela" class="estrela" type="button">
+                            <img src="../img/estrela.png" alt="estrelas" id="img2" />
+                        </button>
+                        <button id="3-estrela" class="estrela" type="button">
+                            <img src="../img/estrela.png" alt="estrelas" id="img3" />
+                        </button>
+                        <button id="4-estrela" class="estrela" type="button">
+                            <img src="../img/estrela.png" alt="estrelas" id="img4" />
+                        </button>
+                        <button id="5-estrela" class="estrela" type="button">
+                            <img src="../img/estrela.png" alt="estrelas" id="img5" />
+                        </button>
+                    </div>
+                    <div id="container-textarea">
+                        <textarea name="textarea" id="texto" placeholder="Digite sua Avaliaçâo/experiencia aqui"></textarea>
+                    </div>
+                    <div id="preferencias">
+                        <label for="checkboxemail" id="extras">Deseja receber promoções e novidades pelo email?</label>
+                        <input type="checkbox" name="checkboxemail" id="checkboxemail" />
+                        <label for="checkboxrecomendacao">Recomenda a nossa cafeteria?</label>
+                        <input type="checkbox" name="checkboxrecomendacao" id="checkboxrecomendacao"/>
+                    </div>
+                    <div id="enviar-avaliacao">
+                        <input type="submit" id="enviar" value="Enviar" />
+                    </div>
+                </form>
+            </div>        
             
             <button id="btnVoltar" type="button">Voltar</button>
         </dialog>
