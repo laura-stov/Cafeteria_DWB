@@ -140,7 +140,6 @@ main{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* grid-template-columns: repeat(2, 20%); */
     gap: 2%;
     list-style: none;
     width: 100%;
@@ -498,8 +497,8 @@ input{
     display: flex;
     width: 15px;
     height: 15px;
-    margin-bottom: 10px; /* adiciona espaço entre as linhas */
-    color: #333; /* define a cor do texto */
+    margin-bottom: 10px;
+    color: #333; 
 }
 
 #avaliacoes button[type="button"]{ background-color: transparent; }
@@ -815,12 +814,6 @@ input{
         text-align: center;
         width: 100%;
     }
-    /* #novidades ul, #promocoes ul{
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 20px;
-        grid-auto-rows: 300px; 
-        
-    } */
 }
 
 @media (max-width: 1115px) {
@@ -892,22 +885,18 @@ input{
 }
 
 @media (max-width: 370px) {
-    /* #novidades ul, #promocoes ul{
-        grid-template-columns: 1fr;
-    } */
-
     #novidades li, #promocoes li {
-        height: auto; /*Permite que a altura se ajuste ao conteúdo*/
+        height: auto; 
         
-        padding: 10px; /*Reduz o padding para caber melhor*/
-        width: 90%; /*Ajuste de largura para caber melhor na tela*/
-        margin: 0 auto; /*Centraliza o item*/
+        padding: 10px; 
+        width: 90%; 
+        margin: 0 auto; 
     }
 
     #novidades img, #promocoes img {
-        width: 100%; /*Ajusta a imagem para ocupar toda a largura da caixa*/
-        height: auto; /*Mantém a proporção da imagem*/
-        border-radius: 15px; /*Ajusta o arredondamento para caber no layout menor*/
+        width: 100%; 
+        height: auto; 
+        border-radius: 15px; 
     }
 
     .titulo{
@@ -928,7 +917,6 @@ input{
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 20px;
         grid-auto-rows: 300px; 
-        
     }
 }
 
@@ -938,9 +926,7 @@ input{
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-    }
-    
-    
+    }    
 }
 
 @media (max-width: 750px) {
@@ -985,29 +971,28 @@ input{
 }
 
 @media (max-width: 370px) {
-    #novidades ul, #promocoes ul{
+    #novidades ul, #promocoes ul {
         grid-template-columns: 1fr;
     }
 
     #novidades li, #promocoes li {
-        height: auto; /*Permite que a altura se ajuste ao conteúdo*/
-        
-        padding: 10px; /*Reduz o padding para caber melhor*/
-        width: 90%; /*Ajuste de largura para caber melhor na tela*/
-        margin: 0 auto; /*Centraliza o item*/
+        height: auto;
+        padding: 10px;
+        width: 90%;
+        margin: 0 auto;
     }
 
     #novidades img, #promocoes img {
-        width: 100%; /*Ajusta a imagem para ocupar toda a largura da caixa*/
-        height: auto; /*Mantém a proporção da imagem*/
-        border-radius: 15px; /*Ajusta o arredondamento para caber no layout menor*/
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
     }
 
-    .titulo{
+    .titulo {
         font-size: 45px;
     }
 
-    .texto1{
+    .texto1 {
         font-size: 15px;
     }   
 }
